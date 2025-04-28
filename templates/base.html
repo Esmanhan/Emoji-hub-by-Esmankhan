@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .btn-search {
+            margin-top: 40px;
+            padding: 15px 25px;
+            font-size: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .position-relative {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <h class="reveal-text">Emoji Hub by Esmankhan🥰🥰🥰</h>
+        <h3 class="fw-normal text-muted mb-3">Choose any emoji you like🥵🥵🥵</h3>
+        <div class="d-flex gap-3 justify-content-center lead fw-normal">
+            <form method="post">
+                <a class="icon-link" href="/about">What the hell is this?</a>
+                <a class="btn btn-create" href="/create-emoji">Create your own favorites</a>
+                <a class="btn btn-create" href="/your-favorites">List of your favorites</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Форма для поиска -->
+    <form method="post">
+        <input type="text" class="form-control" id="firstName" placeholder="Search" value="" required="">
+        <select class="form-select" id="country" required="">
+            <option value="">Choose category</option>
+            <option>smileys-and-people</option>
+            <option>animals-and-nature</option>
+            <option>food-and-drink</option>
+            <option>travel-and-places</option>
+            <option>activities</option>
+            <option>objects</option>
+            <option>symbols</option>
+            <option>flags</option>
+        </select>
+        <button class="btn-search" type="button" id="searchButton">Search</button>
+    </form>
+
+    <!-- Результаты поиска -->
+    <div id="results"></div>
+</div>
+
+
+</body>
+</html>

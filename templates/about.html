@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <title>Random emoji</title>
+</head>
+<body>
+<div class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-6 px-0">
+            <h1 class="display-4 fst-italic">An emoji is a small digital image or icon used to express an idea, emotion, or concept in electronic communication. Emojis are often used in text messages, social media, emails, and other digital platforms to add emotional nuance, clarify meaning, or make messages more engaging.</h1>
+            <p class="lead my-3">Origin:
+
+Emojis were first created in the late 1990s by Shigetaka Kurita in Japan for mobile communication.
+
+Originally, they were very simple 12×12 pixel images.
+
+Their use spread globally with the rise of smartphones, especially after Apple added an emoji keyboard to the iPhone in 2011.
+
+🔹 Purpose:
+
+Emojis add emotion, tone, or visual context to text, which is often missing in plain writing.
+
+For example, saying "I'm fine" can sound cold — but "I'm fine 😊" feels much warmer and more friendly.
+
+🔹 Types of Emojis:
+
+Smileys and Emotions: 😀😂😭😡
+
+People and Activities: 🏃‍♂️🎤🏀👩‍⚕️
+
+Animals and Nature: 🐶🌳🌈🌊
+
+Food and Drink: 🍎🍕☕🍰
+
+Travel and Places: 🚗✈️🏖️🗽
+
+Objects: 📱💡🖊️🎁
+
+Symbols: ❤️✔️⚠️♻️
+
+Flags: 🇯🇵🇺🇸🇬🇧🇰🇿
+
+🔹 Technical Side:
+
+Each emoji is actually a Unicode character.
+
+Unicode is a universal system that ensures that emojis appear (almost) the same across different devices and platforms.
+
+🔹 Difference from Emoticons:
+
+Emoticons are made from keyboard characters, like :) or ¯_(ツ)_/¯.
+
+Emojis are graphic icons designed to represent faces, objects, and ideas..</p>
+            <p class="lead mb-0"><a href="https://emojihub.org/" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+        </div>
+    </div>
+    <form method="post">
+        <a href="{{ url_for('index') }}" class="btn btn-lg btn-primary mt-5 w-100">Great, thanks!</a>
+        </form>
+</div>
+</body>
+</html>
