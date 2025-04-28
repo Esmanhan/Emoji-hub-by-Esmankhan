@@ -6,18 +6,16 @@ const SearchApp = () => {
   const [emojiData, setEmojiData] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
 
-  // Загружаем данные с API
   useEffect(() => {
     fetch('https://emojihub.yurace.pro/api/all')
       .then(response => response.json())
       .then(data => {
         setEmojiData(data);
-        setFilteredItems(data); // Изначально показываем все эмодзи
-      })
+        setFilteredItems(data); 
       .catch(error => console.error('Error fetching emoji data:', error));
   }, []);
 
-  // Обработчик поиска
+
   const handleSearch = () => {
     const filtered = emojiData.filter(item => {
       const matchesQuery = item.name.toLowerCase().includes(searchQuery.toLowerCase());
